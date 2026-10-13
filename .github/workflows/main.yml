@@ -1,0 +1,17 @@
+name: Lab3 Test
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello World"
+      
+  job2:
+    needs: job1
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "The Test is Finished"
